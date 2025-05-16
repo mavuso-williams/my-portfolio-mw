@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mavuso Williams | Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Mavuso 'Teddy' Williams</h1>
+      <p>Welcome to my portfolio</p>
+	<button id="hireMeBtn" onclick="sendMessage()">Hire Me!</button>
+
+<!-- Notification -->
+<div id="notification" class="hidden">Your message has been sent! 🎉</div>
+
+<script>
+  function sendMessage() {
+    // Open the user's email client with a pre-filled email
+    window.location.href = "mailto:williamsmavuso@gmail.com?subject=Hire Me&body=Hello!%0A%0AI am interested in working with you.%0A%0ABest regards";
+
+    // Show the notification on successful action
+    const notification = document.getElementById("notification");
+    notification.textContent = "Your message has been sent! 🎉";
+    notification.style.display = "block";
+
+    // Hide the notification after 3 seconds
+    setTimeout(() => {
+      notification.style.display = "none";
+    }, 3000);
+  }
+</script>
+
+
+    </div>
+  </header>
+
+  <nav>
+    <a href="about.html">About</a>
+	<a href="education.html">Education</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section class="profile">
+    <img src="me.jpg" alt="Your Picture" class="profile-img">
+    <div class="intro">
+      <h2>Hi, I'm Mavuso 'Teddy' Williams</h2>
+      <p>Welcome to my portfolio! I'm a passionate Junior Security Analyst/ Ethical Hacker...</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mavuso Williams</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
